@@ -1,0 +1,234 @@
+:root {
+  --title-font: 'Montserrat', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+  --color-bg-header: #0a0f1c;
+  --color-bg-nav: #111827;
+  --color-bg-footer: #0a0f1c;
+  --color-bg-testimonios: #f3f4f6;
+  --color-text-primary: #1f2937;
+  --color-text-secondary: #4b5563;
+  --color-text-light: #ffffff;
+  --color-accent: #00bcd4;
+  --color-accent-hover: #0097a7;
+  --color-hover-nav: #00e5ff;
+  --shadow-hover: 0 0 15px rgba(0, 188, 212, 0.5);
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: #fff;
+  color: var(--color-text-primary);
+}
+
+/* NAVBAR */
+nav {
+  background-color: var(--color-bg-nav);
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+nav img {
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+nav img:hover {
+  transform: scale(1.2);
+  box-shadow: var(--shadow-hover);
+}
+
+.logo {
+  width: 60px;
+}
+
+/* Navegación horizontal */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+  color: var(--color-hover-nav);
+}
+
+/* HEADER */
+header {
+  background-color: var(--color-bg-header);
+  background-image: url(../img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  color: var(--color-text-light);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.bienvenida {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.titulo-principal {
+  font-family: var(--title-font);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.intro {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+}
+
+/* PRODUCTOS */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.producto {
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.producto img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 20px;
+  border: 2px solid #ccc;
+  transition: transform 0.3s ease;
+}
+
+.producto img:hover {
+  transform: scale(1.05);
+}
+
+.descripcion {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  margin: 15px 0;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: var(--color-accent-hover);
+}
+
+/* TESTIMONIOS */
+.testimonios {
+  background-color: var(--color-bg-testimonios);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  border-left: 4px solid #ccc;
+  padding-left: 15px;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--color-bg-footer);
+  color: var(--color-text-light);
+  padding: 20px;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .productos {
+    grid-template-columns: 1fr;
+  }
+
+  .titulo-principal {
+    font-size: 2rem;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+.contacto-express {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+.contacto-express h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--color-text-light);
+}
+.contacto-express form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contacto-express input,
+.contacto-express textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-family: var(--body-font);
+  font-size: 1rem;
+}
+.contacto-express input::placeholder,
+.contacto-express textarea::placeholder {
+  color: #999;
+}
+.contacto-express button {
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.contacto-express button:hover {
+  background-color: var(--color-accent-hover);
+}
